@@ -5,6 +5,11 @@ jobs:
     steps:
       - run: whoami
 
+      - uses: actions/checkout@v2
+      
+      # It should work a second time
+      - uses: actions/checkout@v2
+
       - name: Run a container that outputs to foo/output-file and puts nasty permissions on foo
         uses: ./
 
